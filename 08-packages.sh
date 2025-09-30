@@ -26,9 +26,9 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo -e $R" $2 is FAILED "$N &>>$LOGFILE
+        echo -e $R" $2 is FAILED "$N 
     else
-        echo -e $G" $2 is SUCCESS "$N &>>$LOGFILE
+        echo -e $G" $2 is SUCCESS "$N 
     fi
 }
 
@@ -40,7 +40,7 @@ do
     if [ $? -ne 0 ]  
     then
         dnf install $packages -y
-        VALIDATE $? "current installing package $packages :: "
+        VALIDATE $? "current installing package $packages :: " &>>LOGFILE
     else
         echo -e $Y"The mentioned $packages is already Installed..."$N &>>$LOGFILE
     fi
