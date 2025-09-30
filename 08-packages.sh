@@ -5,7 +5,7 @@ echo "Installing packages using for loop"
 for packages in $@
 do
     echo $packages
-        
+    dnf list installed $packages   
 done
 
 # for packages in $@
