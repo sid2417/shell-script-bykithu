@@ -15,7 +15,7 @@ echo "which user using this :: $USER"
 
 echo "your home directory :: $HOME"
 
-echo "your script name :: $0"
+echo "name of the currently running script :: $0"
 
 echo "process instance id of current file or script :: $$ "
 

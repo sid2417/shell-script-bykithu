@@ -5,9 +5,13 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-echo -e $Y "Installing packages using for loop" $N
-echo -e $Y "Number of vaiables in arguments :: $#" $N
-echo -e $G "All vaiables in arguments $@" $N
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+
+echo -e $Y "*********Installing packages using for loop*********" $N
+echo -e $Y "*******Number of vaiables in arguments :: $#" $N
+echo -e $G "****All vaiables in arguments :: $@" $N
 
 USER=$(id -u)
 if [ $USER -ne 0 ]
@@ -22,9 +26,9 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo -e $R" $2 is FAILED "$N
+        echo -e $R" $2 is FAILED "$N &>>$LOGFILE
     else
-        echo -e $G" $2 is SUCCESS "$N
+        echo -e $G" $2 is SUCCESS "$N &>>$LOGFILE
     fi
 }
 
@@ -38,7 +42,7 @@ do
         dnf install $packages -y
         VALIDATE $? "current installing package $packages :: "
     else
-        echo -e $Y"The mentioned $packages is already Installed..."$N
+        echo -e $Y"The mentioned $packages is already Installed..."$N &>>$LOGFILE
     fi
 done
 
