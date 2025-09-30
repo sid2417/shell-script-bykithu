@@ -4,11 +4,14 @@ echo "Installing packages using for loop"
 
 for packages in $@
 do
+    echo "Number of vaiables in arguments $#"
+    echo "All vaiables in arguments $@"
     echo $packages
     dnf list installed $packages 
     if [ $? -ne 0 ]  
     then
         echo "dnf install $packages -y"
+        echo "The mentioned $packages is Failed..."
     else
         echo "The mentioned $packages is already Installed..."
     fi
