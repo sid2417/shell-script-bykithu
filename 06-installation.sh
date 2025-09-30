@@ -12,5 +12,8 @@ else
     echo "Plese provide the root access to the user"
 fi
 
+echo " Now installation process is begin..."
 
-dnf install nginx -y
+dnf install nginxxxx -y
+
+echo "this is installtaion process is success..."
