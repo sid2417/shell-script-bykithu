@@ -40,7 +40,7 @@ do
     if [ $? -ne 0 ]  
     then
         dnf install $packages -y
-        VALIDATE $? "current installing package $packages :: " &>>LOGFILE
+        VALIDATE $? "current installing package $packages :: " &>>$LOGFILE
     else
         echo -e $Y"The mentioned $packages is already Installed..."$N &>>$LOGFILE
     fi
