@@ -20,7 +20,7 @@ do
     dnf list installed $packages 
     if [ $? -ne 0 ]  
     then
-        echo "dnf install $packages -y"
+        dnf install $packages -y
         echo "The mentioned $packages is Failed..."
     else
         echo "The mentioned $packages is already Installed..."
