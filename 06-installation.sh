@@ -15,9 +15,9 @@ fi
 
 echo " Now installation process is begin..."
 
-dnf install nginxxxx -y
+# dnf install nginxxxx -y
 
-# dnf install nginx -y
+dnf install nginx -y
 
 if [ $? -eq 0 ]
 then 
