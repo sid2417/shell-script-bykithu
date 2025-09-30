@@ -5,7 +5,13 @@ echo "Installing packages using for loop"
 for packages in $@
 do
     echo $packages
-    dnf list installed $packages   
+    dnf list installed $packages 
+    if [ $? -ne 0 ]  
+    then
+        echo "dnf install $packages -y"
+    else
+        echo "The mentioned $packages is already Installed..."
+    fi
 done
 
 # for packages in $@
