@@ -14,6 +14,16 @@ else
 fi
 
 
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then 
+        echo " $2 is FAILED "
+    else
+        echo " $2 is SUCCESS "
+    fi
+}
+
+
 for packages in $@
 do
     echo $packages
@@ -21,8 +31,7 @@ do
     if [ $? -ne 0 ]  
     then
         dnf install $packages -y
-        echo "The mentioned $packages is Failed..."
-        exit 2
+        VALIDATE $? "current installing package $packages :: "
     else
         echo "The mentioned $packages is already Installed..."
     fi
