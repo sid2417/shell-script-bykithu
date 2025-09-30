@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Installing packages using for loop"
+echo "Number of vaiables in arguments $#"
+echo "All vaiables in arguments $@"
 
 for packages in $@
 do
-    echo "Number of vaiables in arguments $#"
-    echo "All vaiables in arguments $@"
     echo $packages
     dnf list installed $packages 
     if [ $? -ne 0 ]  
