@@ -3,6 +3,7 @@
 # using condition we install the nginx
 # we checking user is having root access or not
 
+# colors must mention the first 
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
