@@ -36,13 +36,13 @@ VALIDATE(){
 for packages in $@
 do
     echo $packages
-    dnf list installed $packages 
+    dnf list installed $packages &>>$LOGFILE
     if [ $? -ne 0 ]  
     then
-        dnf install $packages -y
-        VALIDATE $? "current installing package $packages :: " &>>$LOGFILE
+        dnf install $packages -y &>>$LOGFILE
+        VALIDATE $? "current installing package $packages :: " 
     else
-        echo -e $Y"The mentioned $packages is already Installed..."$N &>>$LOGFILE
+        echo -e $Y"The mentioned $packages is already Installed..."$N 
     fi
 done
 
