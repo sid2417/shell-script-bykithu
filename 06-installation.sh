@@ -3,17 +3,22 @@
 # using condition we install the nginx
 # we checking user is having root access or not
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 USERNAME=$(id -u)
 
 if [ $USERNAME -eq 0 ]
 then
-    echo "You are a root user"
+    echo -e $G"You are a root user"$N
 else 
-    echo "Plese provide the root access to the user"
+    echo -e $R"Plese provide the root access to the user"$N
     exit 2
 fi
 
-echo " Now installation process is begin..."
+echo -e $Y" Now installation process is begin..."$N
 
 # dnf install nginxxxx -y
 
@@ -21,10 +26,10 @@ dnf install nginx -y
 
 if [ $? -eq 0 ]
 then 
-    echo "Your installation is success...."
+    echo -e $G"Your installation is success...."$N
 else 
-    echo "Your installtion is went wrong...."
+    echo -e $R"Your installtion is went wrong...."$N
     exit 2
 fi
 
-echo " nginx is installed successfully...."
+echo -e $G" nginx is installed successfully...."$N
