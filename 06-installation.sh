@@ -17,4 +17,14 @@ echo " Now installation process is begin..."
 
 dnf install nginxxxx -y
 
-echo "this is installtaion process is success..."
+# dnf install nginx -y
+
+if [ $? -eq 0 ]
+then 
+    echo "Your installation is success...."
+else 
+    echo "Your installtion is went wrong...."
+    exit 2
+fi
+
+echo " nginx is installed successfully...."
