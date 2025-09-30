@@ -10,6 +10,7 @@ then
     echo "You are a root user"
 else 
     echo "Plese provide the root access to the user"
+    exit 2
 fi
 
 echo " Now installation process is begin..."
