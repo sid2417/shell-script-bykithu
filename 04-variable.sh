@@ -34,3 +34,6 @@ else
     echo "$1 is greater than $2"
     echo "Condtion is FALSE..."
 fi
+
+echo "$@"
+echo "$#"

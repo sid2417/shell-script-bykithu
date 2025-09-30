@@ -1,7 +1,7 @@
 #!/bin/bash
 
-VARIABLE1=20
-VARIABLE2=kithu
+VARIABLE1=$1
+VARIABLE2=$2
 
 echo "Total varaiables list :: $@"
 
