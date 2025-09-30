@@ -22,6 +22,7 @@ do
     then
         dnf install $packages -y
         echo "The mentioned $packages is Failed..."
+        exit 2
     else
         echo "The mentioned $packages is already Installed..."
     fi
