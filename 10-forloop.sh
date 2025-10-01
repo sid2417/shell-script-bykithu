@@ -11,12 +11,13 @@ N=\e[0m
 
 
 
+
 USER=$(id -u)
-if [ $? -eq 0 ]
+if [ $USER -eq 0 ]
 then 
-    echo -e $Y "user already have root access..." $N
+    echo -e $Y"user already have root access..."$N
 else
-    echo -e $R "Please provide the root access to the user ...." $N
+    echo -e $R"Please provide the root access to the user ...."$N
     exit 3
 fi
 
