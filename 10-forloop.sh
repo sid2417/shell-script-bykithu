@@ -4,10 +4,10 @@
 
 ## nginx yara.x86_64 yasm.x86_64 wlcs.x86_64 tftp.x86_64 zvbi.x86_64
 
-R=\e[31m
-G=\e[32m
-Y=\e[33m
-N=\e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 
 
