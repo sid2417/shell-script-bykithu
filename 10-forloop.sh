@@ -11,7 +11,7 @@ N=\e[0m
 
 
 
-USER=(id -u)
+USER=$(id -u)
 if [ $? -eq 0 ]
 then 
     echo -e $Y "user already have root access..." $N
