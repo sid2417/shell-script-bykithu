@@ -33,10 +33,9 @@ VALIDATE(){
     fi
 }
 
-
+echo -e $G "The passing arguments are :: $@" $N
 for packages in $@
 do 
-    echo -e $G "The passing arguments are :: $@" $N
     yum list installed $packages
     if [ $? -ne 0 ] 
     then
