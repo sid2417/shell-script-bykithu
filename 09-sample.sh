@@ -8,7 +8,7 @@ Y=\e[33m
 N=\e[0m
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPTNAME=$($0 | cut -d "." -f1)
+SCRIPTNAME=$(echo"$0 | cut -d "." -f1")
 LOGFILE=/tmp/$SCRIPTNAME_$TIMESTAMP
 
 # &>>LOGFILE
