@@ -16,19 +16,19 @@ LOGFILE=/tmp/SCRIPTNAME_TIMESTAMP
 USER=$(id -u)
 if [ $USER -ne 0 ]
 then
-    echo " please provide the root access to the user ...."
+    echo -e $R" please provide the root access to the user ...."$N
     exit 3
 else
-    echo " user already have root access ... "
+    echo -e $G" user already have root access ... "$N
 fi
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 installation was failed"
+        echo -e $R"$2 installation was failed"$N
         exit 2
     else
-        echo "$2 installed successfully"
+        echo -e $G"$2 installed successfully"$N
     fi
 }
 
@@ -39,7 +39,7 @@ then
     dnf install nginx -y
     VALIDATE $? "the nginx is :: "
 else
-    echo " The current package nginx is already installed.. "
+    echo -e $Y" The current package nginx is already installed.. "$N
 fi
 
 
