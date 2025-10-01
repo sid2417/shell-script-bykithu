@@ -9,7 +9,8 @@ N="\e[0m"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
-LOGFILE=/tmp/$SCRIPTNAME_$TIMESTAMP
+LOGFILE=/tmp/$SCRIPTNAME_$TIMESTAMP.log
+
 
 
 # &>>$LOGFILE

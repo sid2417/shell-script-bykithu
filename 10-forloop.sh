@@ -9,7 +9,9 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 
 
 USER=$(id -u)
@@ -36,10 +38,10 @@ VALIDATE(){
 echo -e $G "The passing arguments are :: $@" $N
 for packages in $@
 do 
-    yum list installed $packages &>>$LOGFILE
+    yum list installed $packages &>>$LOGFILE.log
     if [ $? -ne 0 ] 
     then
-        dnf install $packages -y &>>$LOGFILE
+        dnf install $packages -y &>>$LOGFILE.log
         VALIDATE $? "your mentioned $packages is :: "
     else
         echo -e $Y" The mentioned $packages is already installed.."$N
