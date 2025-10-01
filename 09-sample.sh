@@ -12,7 +12,7 @@ SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPTNAME_$TIMESTAMP
 
 
-# &>>LOGFILE
+# &>>$LOGFILE
 
 USER=$(id -u)
 if [ $USER -ne 0 ]

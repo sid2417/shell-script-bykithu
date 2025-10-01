@@ -39,7 +39,7 @@ do
     yum list installed $packages
     if [ $? -ne 0 ] 
     then
-        dnf install $packages -y
+        dnf install $packages -y &>>$LOGFILE
         VALIDATE $? "your mentioned $packages is :: "
     else
         echo -e $Y" The mentioned $packages is already installed.."$N
