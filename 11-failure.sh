@@ -82,4 +82,4 @@ dnf install git -y
 echo "is script proceeding?"
 
 
-trap 'failure line_Number command_name' ERR
+trap 'failure linenumber commandname' ERR
