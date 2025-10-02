@@ -25,7 +25,7 @@ fi
 
 DELETE_FILES=$(find $SOURCE_PATH -name "*.log" -mtime +30)
 
-while IFS read -r checkline
+while IFS= read -r checkline
 do 
     echo "Deleting files : $checkline"
     #rm -r $checkline
