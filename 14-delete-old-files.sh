@@ -12,13 +12,18 @@
 
 # Q: Delete the old files in /tmp directory with .log format morethan 30 days older
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 SOURCE_PATH="/tmp/"
 
 if [ -d $SOURCE_PATH ]
 then
-    echo "your mentioned directory will be existed.."
+    echo -e $G"your mentioned directory will be existed.."$N
 else
-    echo "you mentioned the path is wrong...Please check your path"
+    echo -e $R"you mentioned the path is wrong...Please check your path"$N
     exit 4
 fi
 
@@ -27,6 +32,6 @@ DELETE_FILES=$(find $SOURCE_PATH -name "*.sh" -mtime +30)
 
 while IFS= read -r checkline
 do 
-    echo "Deleting files : $checkline"
+    echo -e $Y"Deleting files : $checkline"$N
     #rm -r $checkline
 done <<< $DELETE_FILES
