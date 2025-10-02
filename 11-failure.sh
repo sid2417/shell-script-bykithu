@@ -53,7 +53,7 @@
 
 # No match for argument: mysfaffql
 # Error: Unable to find a match: mysfaffql
-trap 'failure linenumber commandname' ERR
+
 
 set -e
 failure () {
@@ -82,3 +82,4 @@ dnf install git -y
 echo "is script proceeding?"
 
 
+trap 'failure linenumber commandname' ERR
