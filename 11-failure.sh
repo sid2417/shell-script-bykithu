@@ -53,13 +53,13 @@
 
 # No match for argument: mysfaffql
 # Error: Unable to find a match: mysfaffql
-trap 'failure ${LINENO} "${BASH_COMMAND}"' ERR
+
 
 set -e
 failure () {
     echo "$1 : $2"
 }
-
+trap 'failure ${LINENO} "${BASH_COMMAND}"' ERR
 
 
 
