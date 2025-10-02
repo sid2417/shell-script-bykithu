@@ -9,14 +9,36 @@
 # trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 
 
+
+# No match for argument: mysfaffql
+# Error: Unable to find a match: mysfaffql
+# Failed at 21: dnf install mysfaffql -y
+
+
+
+# set -e
+
+# failure(){
+#     echo "$1 $2"
+# #here $1 is line number and $2 is command
+# }
+
+# trap "failure find bash" ERR
+
+
+# No match for argument: mysfaffql
+# Error: Unable to find a match: mysfaffql
+# find bash
+
+
+
 set -e
-
 failure(){
-    echo "$1 $2"
-#here $1 is line number and $2 is command
+    echo "$1 : $2"
 }
+trap 'failure' ERR
 
-trap "failure find bash" ERR
+
 
 
 USERID=$(id -u) #ERR
