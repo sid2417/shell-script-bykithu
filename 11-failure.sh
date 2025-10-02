@@ -32,13 +32,23 @@
 
 
 
+# set -e
+# failure(){
+#     echo "$1 : $2"
+# }
+# trap 'failure' ERR
+
+
+# No match for argument: mysfaffql
+# Error: Unable to find a match: mysfaffql
+#  :
+
+
 set -e
 failure(){
-    echo "$1 : $2"
+
 }
 trap 'failure' ERR
-
-
 
 
 USERID=$(id -u) #ERR
