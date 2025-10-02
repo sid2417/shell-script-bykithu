@@ -30,5 +30,3 @@ do
     echo "Deleting files : $checkline"
     #rm -r $checkline
 done <<< $DELETE_FILES
-
-
