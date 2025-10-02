@@ -56,7 +56,7 @@
 
 
 set -e
-failure() {
+failure () {
     echo "$1 : $2"
 }
 
