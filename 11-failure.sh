@@ -45,7 +45,9 @@
 
 
 set -e
-failure(){}
+failure(){
+    echo ""
+}
 trap 'failure' ERR
 
 
