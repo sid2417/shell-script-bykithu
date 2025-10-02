@@ -33,5 +33,5 @@ DELETE_FILES=$(find $SOURCE_PATH -name "*.sh" -mtime +30)
 while IFS= read -r checkline
 do 
     echo -e $Y"Deleting files : $checkline"$N
-    #rm -r $checkline
+    rm -r $checkline
 done <<< $DELETE_FILES
