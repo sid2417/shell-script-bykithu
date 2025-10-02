@@ -1,12 +1,23 @@
 #!/bin/bash
 
+# set -e
+
+# failure(){
+#     echo "Failed at $1: $2"
+# }
+
+# trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
+
 set -e
 
 failure(){
-    echo "Failed at $1: $2"
+    echo "$1 $2"
+#here $1 is line number and $2 is command
 }
 
-trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+trap "failure find bash" ERR
+
 
 USERID=$(id -u) #ERR
 
@@ -22,3 +33,5 @@ dnf install mysfaffql -y
 dnf install git -y
 
 echo "is script proceeding?"
+
+
