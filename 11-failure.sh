@@ -74,7 +74,7 @@ else
     echo "You are super user."
 fi
 
-
+trap 'failure linenumber commandname' ERR
 
 dnf install mysfaffql -y
 dnf install git -y
@@ -82,4 +82,3 @@ dnf install git -y
 echo "is script proceeding?"
 
 
-trap 'failure linenumber commandname' ERR
