@@ -60,7 +60,7 @@ failure () {
     echo "$1 : $2"
 }
 
-trap 'failure line command' ERR
+
 
 
 
@@ -73,6 +73,8 @@ then
 else
     echo "You are super user."
 fi
+
+trap 'failure line command' ERR
 
 dnf install mysfaffql -y
 dnf install git -y
