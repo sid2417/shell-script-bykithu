@@ -17,7 +17,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-SOURCE_PATH="/tmp/"
+SOURCE_PATH="/tmp/data/abs/"
 
 if [ -d $SOURCE_PATH ]
 then
