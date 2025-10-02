@@ -53,7 +53,7 @@
 
 # No match for argument: mysfaffql
 # Error: Unable to find a match: mysfaffql
-
+trap 'failure linenumber commandname' ERR
 
 set -e
 failure () {
@@ -74,7 +74,7 @@ else
     echo "You are super user."
 fi
 
-trap 'failure linenumber commandname' ERR
+
 
 dnf install mysfaffql -y
 dnf install git -y
