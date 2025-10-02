@@ -12,7 +12,7 @@
 
 # Q: Delete the old files in /tmp directory with .log format morethan 30 days older
 
-SOURCE_PATH=$(/tmp/)
+SOURCE_PATH="/tmp/"
 
 if [ -d $SOURCE_PATH ]
 then
