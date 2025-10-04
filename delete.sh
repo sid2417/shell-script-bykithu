@@ -3,10 +3,6 @@
 ### Deleting the old files
 
 
-rm -r <folder or file name>
-
-
-
 FILELIST=$(/tmp/abcd/)
 
 DELETELIST=$(find $FILELIST -name "*.log" -mtime +14)
