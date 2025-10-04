@@ -1,5 +1,5 @@
 #!/bin/bash
 
-VARIABLE=Tomorrow
-echo "This is Tomorrow $VARIABLE "
-echo "this is pid of :: $$"
+VARIABLE=tomorrow
+echo "This is   TOMORROW script :: $VARIABLE "
+echo "this is pid of TOMORROW script :: $$"

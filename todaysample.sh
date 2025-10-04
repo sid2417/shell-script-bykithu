@@ -2,13 +2,13 @@
 
 ### now we are calling the other scripts
 
-VARIABLE=TOday
+VARIABLE=today
 
-echo "before calling the is a TOmorrow script $VARIABLE"
-echo "this is value of pid $$ "
+echo "Before calling the script name is TODAY :: $VARIABLE"
+echo "this is value of TODAY pid $$ "
 
 ./tomorrowsample.sh
 
-echo "after calling the Tomorrow script $VARIABLE"
-echo "this is pid of after calling :: $$"
+echo "after calling the TOMORROW script :: $VARIABLE"
+echo "this is pid of after calling TOMORROW script :: $$"
 
