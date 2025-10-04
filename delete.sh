@@ -13,4 +13,4 @@ while IFS= read -r line
 do 
     echo "printing the deleting files :  $line" 
     rm -r $line
-done <<< $FILELIST
+done <<< $DELETELIST
