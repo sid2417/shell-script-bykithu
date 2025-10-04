@@ -6,7 +6,7 @@ echo "this is current script :: $VARIABLE"
 
 echo "this is pid of current :: $$ "
 
-./current.sh
+./other.sh
 
 echo "after calling current script :: $VARIABLE"
 
