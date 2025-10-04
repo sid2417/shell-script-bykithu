@@ -22,6 +22,15 @@ echo "after calling the tomorrow script the pid of today :: $$"
 
 
 
+before calling the is a TOmorrow script TOday
+this is value of pid 1624
+This is Tomorrow Tomorrow
+this is pid of :: 1625
+after calling the Tomorrow script TOday
+this is pid of after calling :: 1624
+
+
+
 
 # echo "This is   TOMORROW script :: $VARIABLE "
 # echo "this is pid of TOMORROW script :: $$"
