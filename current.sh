@@ -20,3 +20,12 @@ echo "after calling pid of current :: $$ "
 # this is pid of other script :: 4971
 # after calling current script :: current
 # after calling pid of current :: 4970
+
+
+
+# this is current script :: current
+# this is pid of current :: 5005
+# this is other script :: other
+# this is pid of other script :: 5005
+# after calling current script :: other
+# after calling pid of current :: 5005
