@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-THRESHOLD_LIMIT=5
+THRESHOLD_LIMIT=44
 CURRENT_LIMIT=$(df -hT | grep xfs | awk -F " " '{print $6F}' | cut -d "%" -f1)
 MESSAGE=""
 FOLDER_NAME=$(df -hT | grep xfs | awk -F " " '{print $NF}')
