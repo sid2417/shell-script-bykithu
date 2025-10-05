@@ -7,17 +7,19 @@ MESSAGE=""
 FOLDER_NAME=$(df -hT | grep xfs | awk -F " " '{print $NF}')
 
 
-if [ $CURRENT_LIMIT -ge $THRESHOLD_LIMIT ]
-then
-    echo "your current $FOLDER_NAME limit $CURRENT_LIMIT is exceeded to threshold limit $THRESHOLD_LIMIT"
-else
-    echo "your current $FOLDER_NAME limit $CURRENT_LIMIT is with in the limit..."
-fi
+
 
 while IFS= read -r line
 do 
-    echo "deleting folder :: $line"
-    rm -r line
+    if [ $CURRENT_LIMIT -ge $THRESHOLD_LIMIT ]
+    then
+        MESSAGE+="your current $FOLDER_NAME limit $CURRENT_LIMIT is exceeded to threshold limit $THRESHOLD_LIMIT \n"
+        # echo "your current $FOLDER_NAME limit $CURRENT_LIMIT is exceeded to threshold limit $THRESHOLD_LIMIT"
+    else
+        echo "your current $FOLDER_NAME limit $CURRENT_LIMIT is with in the limit..."
+    fi
+        echo "deleting folder :: $line"
+        #rm -r $line
 done <<< $FOLDER_NAME
 
 
