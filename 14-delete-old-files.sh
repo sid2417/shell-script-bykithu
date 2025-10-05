@@ -28,7 +28,7 @@ else
 fi
 
 
-DELETE_FILES=$(find $SOURCE_PATH -name "*.sh" -mtime +1)
+DELETE_FILES=$(find $SOURCE_PATH -name "*.log" -mtime +1)
 
 while IFS= read -r checkline
 do 
