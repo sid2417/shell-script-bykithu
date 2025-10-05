@@ -23,6 +23,8 @@ do
 done <<< $FOLDER_NAME
 
 
+echo -e "Alert Message: $MESSAGE"
+
 
 # df -hT | grep xfs | awk -F " " '{print $NF}'
 # /
