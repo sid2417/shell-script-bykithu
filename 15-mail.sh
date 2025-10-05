@@ -26,6 +26,9 @@ done <<< $FOLDER_NAME
 echo -e "Alert Message: $MESSAGE"
 
 
+echo "$MESSAGE" | mail -s "Disk Usage Alert" siddhartha.fresher@gmail.com
+
+
 # df -hT | grep xfs | awk -F " " '{print $NF}'
 # /
 
